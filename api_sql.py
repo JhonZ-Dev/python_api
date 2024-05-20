@@ -13,3 +13,13 @@ if response.status_code == 200:
 else:
     print(f"Error al acceder a la API: {response.status_code}")
     exit()
+
+# Conexión a SQL Server
+conn = pyodbc.connect(
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "SERVER=tu_servidor;"
+    "DATABASE=tu_base_de_datos;"
+    "UID=tu_usuario;"
+    "PWD=tu_contraseña"
+)
+cursor = conn.cursor()
