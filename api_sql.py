@@ -41,3 +41,4 @@ conn.commit()
 # Cerrar la conexión
 cursor.close()
 conn.close()
+print("Datos insertados correctamente en la base de datos.")
